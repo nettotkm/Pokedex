@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- <p>{{nome.toLocaleUpperCase()}}</p>
+<p>{{7+4}}</p>
+<div *ngIf="isVisible; else condicaofalsa ">{{aluno?.dados?.nome}}</div>
+<ng-template #condicaofalsa>
+  <p>texto novo</p>
+</ng-template>
+<div [ngSwitch]="myvalue">
+  <span *ngSwitchCase="1">VALOR 1</span>
+  <span *ngSwitchCase="2">VALOR 2</span>
+  <span *ngSwitchCase="3">VALOR 3</span>
+  <span *ngSwitchCase="0">VALOR PADRÃO</span>
+</div>
+
+<ul>
+  <li *ngFor="let item of myList"> Item {{item}}</li>
+</ul> -->
+<input type="text" id="poke-filter" placeholder="Search" maxlength="20">
+<ul class="poke-list">
+  <li class="poke-list-item" *ngFor="let pokemon of pokemonList">
+    <img src="//serebii.net/pokedex-xy/icon/{{pokemon.number | number:'3.0-0'}}.png">
+    <span>{{pokemon.number | number: '3.0-0'}} - {{pokemon.name}}</span>
+  </li>
+  <!-- <li *ngFor="let item of pokemonList"> {{item.name}} - {{item.number}}</li> -->
+</ul>
